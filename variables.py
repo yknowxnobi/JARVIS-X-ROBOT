@@ -30,7 +30,7 @@ class Config(object):
     DB_NAME = "jarvismanager"
 
     # Bot token
-    TOKEN = "2323839365:AAFgfdadqawlfdsM7slOa33eM_ghop"  # Get bot token from @BotFather on Telegram
+     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7846108167:AAHtYQ_g_RPUvb7sAK9RM-QpmdhSuNVjUPY") # ⚠️ Required
 
     # Owner's Telegram user ID (Must be an integer)
     OWNER_ID = "7157587567"
