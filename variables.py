@@ -1,8 +1,3 @@
-fix it
-
-
-
-
 class Config(object):
     # Configuration class for the bot
 
