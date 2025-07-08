@@ -1,5 +1,4 @@
-
-
+import os
 
 class Config(object):
     # Configuration class for the bot
@@ -8,6 +7,7 @@ class Config(object):
     LOGGER = True
 
     # <================================================ REQUIRED ======================================================>
+    
     # Telegram API configuration
     API_ID = "28440555"  # Get this value from my.telegram.org/apps
     API_HASH = "71df3db7db7cbe92b32f330961b1e6c9"
@@ -30,24 +30,24 @@ class Config(object):
     DB_NAME = "jarvismanager"
 
     # Bot token
-     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7846108167:AAHtYQ_g_RPUvb7sAK9RM-QpmdhSuNVjUPY") # ⚠️ Required
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7846108167:AAHtYQ_g_RPUvb7sAK9RM-QpmdhSuNVjUPY")  # ⚠️ Required
 
     # Owner's Telegram user ID (Must be an integer)
-    OWNER_ID = "7157587567"
+    OWNER_ID = 7157587567  # ⚠️ Must be int, not string
+
     # <=======================================================================================================>
 
     # <================================================ OPTIONAL ======================================================>
-    # Optional configuration fields
 
     # List of groups to blacklist
     BL_CHATS = []
 
-    # User IDs of sudo users, dev users, support users, tiger users, and whitelist users
-    DRAGONS = []  # Sudo users
-    DEV_USERS = []  # Dev users
-    DEMONS = []  # Support users
-    TIGERS = []  # Tiger users
-    WOLVES = []  # Whitelist users
+    # User ID lists
+    DRAGONS = []   # Sudo users
+    DEV_USERS = [] # Dev users
+    DEMONS = []    # Support users
+    TIGERS = []    # Tiger users
+    WOLVES = []    # Whitelist users
 
     # Toggle features
     ALLOW_CHATS = True
@@ -64,21 +64,13 @@ class Config(object):
 
     # Temporary download directory
     TEMP_DOWNLOAD_DIRECTORY = "./"
+
     # <=======================================================================================================>
 
 
-# <=======================================================================================================>
-
-
 class Production(Config):
-    # Production configuration (inherits from Config)
-
-    # Enable or disable logging
     LOGGER = True
 
 
 class Development(Config):
-    # Development configuration (inherits from Config)
-
-    # Enable or disable logging
     LOGGER = True
